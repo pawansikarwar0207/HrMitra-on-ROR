@@ -1,0 +1,29 @@
+<div class="container mt-4 mb-4">
+	<div class="col-lg-12 ">
+		<div class="card  mt-4 mb-4">
+			<h1 class=" fw-bold text-center mt-3">Trainee</h1>
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-lg-5 mt-5">
+					<p><strong>Name:</strong>  <%= @trainee.name %> </p>
+					<p><strong>Email:</strong>  <%= @trainee.email %> </p>
+					<p><strong>Address:</strong>  <%= @trainee.address %></p>
+					<p><strong>Contact Number:</strong>  <%= @trainee.contact_number %></p>
+					<p><strong>College Name:</strong>  <%= @trainee.college_name %></p>
+					<p><strong>Course Name:</strong>  <%= @trainee.course_name %></p>
+				</div>
+				<div class="col-lg-5">
+					<%= image_tag 'trainee.avif', class:"img-fluid" %>	
+				</div>
+			</div>			
+		</div>
+	</div>	
+</div>
+
+<div class="container mt-4 mb-4">
+
+	<%= link_to 'Edit', edit_admin_trainee_path, class: "btn btn-primary" %>
+	<%= link_to 'Back', admin_trainees_path, class: "btn btn-primary" %>
+	<%= link_to 'Delete',@admin_trainee, class: "btn btn-primary", data: { turbo_confirm: 'Are you sure ?', turbo_method: :delete } %>
+</div>

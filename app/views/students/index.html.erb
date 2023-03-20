@@ -1,0 +1,85 @@
+<div class="container mt-3 mb-3">
+	<div class="col-lg-12">
+		<div class="card rounded-0 mb-5">
+			<div class="card-title">
+				<h1 class="text-center mt-3">Listing Students</h1>
+			</div>
+		</div>
+		<%= link_to 'Create Students', new_student_path,class: "btn btn-primary mb-4" %>
+
+
+		<%= link_to 'Search Students', "#offcanvasExample", data: { bs_toggle: "offcanvas"}, area: { controls: "offcanvasExample" }, role:"button", class:"btn btn-primary mb-4" %>
+
+		<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasExampleLabel">Search Student </h5>
+				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<%= search_form_for @q do |form| %>
+				<div class="form-group mt-3 mb-3">
+					<%= form.label :name, class:"form-label" %> <br>
+					<%= form.search_field :first_name_or_middle_name_or_last_name_cont, class:"form-control" %>
+				</div>
+
+				<div class="form-group mt-3 mb-3">
+					<%= form.label :personal_email, class:"form-label" %><br>
+					<%= form.search_field :personal_email_cont, class:"form-control" %>
+				</div>
+
+				<div class="form-group mt-3 mb-3">
+					<%= form.label :contact_number, class:"form-label" %><br>
+					<%= form.search_field :contact_number_cont, class:"form-control" %>
+				</div>
+
+				<div class="form-group mt-3 mb-3">
+					<%= form.label :full_address, class:"form-label" %><br>
+					<%= form.search_field :address_line_1_or_address_line_2_or_city_or_state_or_country_or_zipcode_cont, class:"form-control" %>
+				</div>							
+
+				<div class="form-group">
+					<%= form.submit 'Search Students', class: "btn btn-primary  mb-4" %>
+				</div>
+				<% end %>	
+			</div>
+		</div>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Full Name</th>
+					<th>Personal Email</th>
+					<th>Contact Number</th>
+					<th>Complete Address </th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @students.each do |student| %>
+				<tr>
+					<td><%= student.full_name %></td>
+					<td><%= student.personal_email %></td>
+					<td><%= student.contact_number %></td>
+					<td><%= student.full_address %></td>
+					<td>
+						<div class="dropdown">
+							<button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+								Actions
+							</button>
+							<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+								<li><%= link_to "Show", student, class:"dropdown-item"%></li>
+								<li><%= link_to "Edit", edit_student_path(student), class:"dropdown-item" %></li>
+								<li><%= link_to 'Delete',student_path(student),class:"dropdown-item", data: { turbo_confirm: 'Are you sure ?', turbo_method: :delete } %></li>
+							</ul>
+						</div> 
+					</td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>	
+	</div>
+</div>
+<style>
+	.modal-backdrop.show{
+		z-index: unset;
+	}
+</style>

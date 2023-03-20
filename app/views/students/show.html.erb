@@ -1,0 +1,56 @@
+<div class="container mt-4 mb-4">
+	<div class="card mb-5">
+		<div class="card-title">
+			<h2 class="text-center mt-3">Student Details</h2>
+		</div>
+	
+	<div class="card-body mt-4 mb-4">
+			<div class="row">
+				<div class="col-lg-5">
+					<p><strong>Full Name:</strong>  <%= @student.full_name %> </p>
+					<p><strong>Personal Email:</strong>  <%= @student.personal_email %> </p>
+					<p><strong>Contact Number:</strong>  <%= @student.contact_number %> </p>
+					<p><strong>Address Line 1:</strong>  <%= @student.address_line_1 %> </p>
+					<p><strong>Address Line 2:</strong>  <%= @student.address_line_2 %> </p>
+					<p><strong>City:</strong>  <%= @student.city %> </p>
+					<p><strong>State:</strong>  <%= @student.state %> </p>
+					<p><strong>Country:</strong>  <%= @student.country %> </p>
+					<p><strong>Zipcode:</strong>  <%= @student.zipcode %> </p>
+				</div>
+				<div class="col-lg-5">
+					<%= image_tag 's1.jpg', class:"img-fluid" %>
+				</div>
+			</div>
+	</div>
+	</div>
+
+	<% if @student.documents.present? %>
+
+
+	<div class="card mb-4">
+		<div class="card-title">
+			<h2 class="text-center mt-3">Document Details</h2>
+		</div>
+			<% @student.documents.each do |document| %>
+					<div class="card-body">
+						<div class="row">
+							<% if document.image.attached? %>
+							<div class="col-lg-4">
+								<%= image_tag document.image %>
+							</div>
+							<% end -%>
+							<div class="col-lg-4 mt-4">
+								<p class="lead">Document Name : <%= document.name %></p>
+							</div>
+							<div class="col-lg-4 mt-4">
+								<p class="lead">Doc Type : <%= document.doc_type %></p>
+							</div>
+						</div>
+					</div>
+			<% end -%>
+	</div>
+	<% end %>
+	<%= link_to 'Edit', edit_student_path, class: "btn btn-primary" %>
+	<%= link_to 'Back', students_path, class: "btn btn-primary" %>
+	<%= link_to 'Delete',@student, class: "btn btn-primary", data: { turbo_confirm: 'Are you sure ?', turbo_method: :delete } %>
+</div>

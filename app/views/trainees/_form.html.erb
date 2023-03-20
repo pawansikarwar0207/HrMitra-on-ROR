@@ -1,0 +1,55 @@
+<%= form_with model:trainee do |form| %>
+
+
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="form-group mb-3">
+				<%= form.label :name %>
+				<%= form.text_field :name, class: "form-control " %>	
+		</div>
+	</div>
+	<div class="col-lg-6">
+		<div class="form-group mb-3">
+			<%= form.label :email %>
+			<%= form.email_field :email, class: "form-control " %>
+			
+		</div>
+	</div>
+</div>
+<div class="row">
+		<div class="col-lg-6">
+		<div class="form-group mb-3">
+			<%= form.label :address %>
+			<%= form.text_field :address, class: "form-control " %>
+			
+		</div>
+	</div>
+	<div class="col-lg-6">
+		<div class="form-group mb-3">
+			<%= form.label :contact_number %>
+			<%= form.text_field :contact_number, class: "form-control " %>
+			
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-6">
+		<div class="form-group mb-3">
+			<%= form.label :college_name %>
+			<%= form.text_field :college_name, class: "form-control " %>
+		</div>
+	</div>
+	<div class="col-lg-6">
+		<div class="form-group mb-3">
+			<%= form.label :course_name %>
+			<%= form.text_field :course_name, class: "form-control " %>	
+		</div>
+	</div>
+</div>
+<div class="form-group">
+	<%= form.submit class: "btn btn-primary" %>
+	<%= link_to 'Back', trainees_path, class: "btn btn-primary" %>
+</div>
+
+
+<% end %>

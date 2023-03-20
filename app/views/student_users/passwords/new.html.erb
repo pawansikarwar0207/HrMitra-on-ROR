@@ -1,0 +1,65 @@
+<div class="col-lg-6 mx-lg-auto mb-5">
+  <div class="card shadow">
+    <div class="card-header">
+      <h3 class="card-title text-center fw-bold">Forgot your password?</h3>
+    </div>
+    <div class="card-body">
+      
+
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, data: { turbo: :false} }) do |f| %>
+        <%= render "student_users/shared/error_messages", resource: resource %>
+
+        <div class="form-group">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control mb-3 mt-2" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Send me reset password instructions", class:"btn btn-primary mb-2" %>
+        </div>
+      <% end %>
+
+      <%= render "student_users/shared/links" %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

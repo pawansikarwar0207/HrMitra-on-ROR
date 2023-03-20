@@ -1,0 +1,43 @@
+<%= form_with model:document do |form| %>
+
+	<div class="col-lg-4">
+		<div class="form-group mb-3">
+			<%= form.label :name %>
+			<%= form.text_field :name, class: "form-control " %>
+			<% document.errors.full_messages_for(:name).each do |message| %>
+			<p class="text-danger"><%= message%></p>
+			<% end -%>
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="form-group mb-3">
+			<%= form.label :doc_type %>
+			<%= form.select :doc_type, options_for_select(Document::DOC_TYPES, selected: document.doc_type),{ prompt: 'Select Document Type'}, { class: 'form-select' } %>
+			<% document.errors.full_messages_for(:doc_type).each do |message| %>
+			<p class="text-danger"><%= message%></p>
+			<% end -%>
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="form-group mb-3">
+			<%= form.label :student_id %>
+			<%= form.select :student_id, options_for_select(Student.all.map {|student| [student.full_name, student.id]}, selected: document.student_id),{ prompt: 'Select Student'}, { class: 'form-select' } %>
+			<% document.errors.full_messages_for(:student_id).each do |message| %>
+			<p class="text-danger"><%= message%></p>
+			<% end -%>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<%= form.label :image, class:"mb-2" %><br>
+		<%= form.file_field :image, class:"mb-3" %>
+	</div>
+
+
+	<div class="form-group">
+		<%= form.submit class: "btn btn-primary" %>
+		<%= link_to 'Back', documents_path, class: "btn btn-primary" %>
+	</div>
+
+
+<% end -%>

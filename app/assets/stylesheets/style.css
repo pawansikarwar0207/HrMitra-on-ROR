@@ -1,0 +1,59 @@
+body{
+	font-family: sans-serif;
+}
+
+.imgage{
+	width: 100%;
+	height: 70vh;
+	max-width: 100%;
+}
+.student{
+	width: 100%;
+	height: 70vh;
+	max-width: 100%;
+}
+.carousel-item img{
+	width: 100%;
+	height: 70vh;
+	max-width: 100%;
+}
+.heading:hover {
+	color: crimson;
+}
+.mentors:hover {
+	color: crimson;
+}
+.emp:hover {
+	color: crimson;
+}
+#head {
+	padding-top: 90px;
+}
+.branch:hover {
+	color: crimson;
+}
+.image-fluid {
+	width: 100%;
+	height: 70vh;
+}
+.branch1:hover {
+	color: crimson;
+}
+.branch2:hover {
+	color: crimson;
+}
+.branch3:hover {
+	color: crimson;
+}
+.docs:hover {
+	color: crimson;
+}
+#doc1{
+	padding-top: 170px;	
+}
+.about:hover {
+	color: crimson;
+}
+#trainee{
+	padding-top: 110px;	
+}

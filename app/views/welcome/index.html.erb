@@ -1,0 +1,173 @@
+<div class="container mb-3 text-center">
+	<h1 class="heading fw-bold mb-5">Welcome to Hr-Mitra</h1>
+</div>
+<div class="container mb-5">
+	<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		    	<%= image_tag 'hr1.jpeg', class:"d-block w-100" %>
+		    </div>
+		    <div class="carousel-item">
+		    	<%= image_tag 'hr2.webp', class:"d-block w-100" %>
+		    </div>
+		    <div class="carousel-item">
+		      <%= image_tag 'hr3.webp', class:"d-block w-100" %>
+		    </div>
+		  </div>
+		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Next</span>
+		  </button>
+		</div>
+</div>
+<div class="container mb-5">
+	<h1 class="mentors fw-bold text-center">Our Mentor's</h1>
+	<div class="row">
+		<div class="col-lg-3 mt-4">
+			<div class="card" style="width: 16rem;">
+				<%= image_tag 'ceo.webp',class:"card-img-top" %>
+			  <div class="card-body">
+			    <h5 class="card-title fw-bold">CEO</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    
+			  </div>
+			</div>
+		</div>
+		<div class="col-lg-3 mt-4">
+			<div class="card" style="width: 16rem;">
+			  <%= image_tag 'cfo.webp',class:"card-img-top" %>
+			  <div class="card-body">
+			    <h5 class="card-title fw-bold">CFO</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    
+			  </div>
+			</div>
+		</div>
+		<div class="col-lg-3 mt-4">
+			<div class="card" style="width: 16rem;">
+			  <%= image_tag 'md.webp',class:"card-img-top" %>
+			  <div class="card-body">
+			    <h5 class="card-title fw-bold">Managing Director</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    
+			  </div>
+			</div>
+		</div>
+		<div class="col-lg-3 mt-4">
+			<div class="card" style="width: 16rem;">
+			  <%= image_tag 'manager1.webp',class:"card-img-top" %>
+			  <div class="card-body">
+			    <h5 class="card-title fw-bold">Manager</h5>
+			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid mt-4">
+	<h1 class="emp fw-bold text-center">Our Employee's</h1>
+	<div class="row">
+		<div class="col-lg-6 mt-3">
+			<%= image_tag 'emp.jpg', class:"img-fluid" %>
+		</div>
+		<div class="col-lg-6 mt-3">
+			<p class="lead fw-bold text-center" id="head">Employees are the base of a strong and long-running organization. Employees run the organization, no matter what level. This means their strength, commitment and dedication, and their emotional connection with the organization can't be judged as assets in monetary value.</p>
+			<p class="text-center "><%= link_to 'See Dashboard', students_path, class: "btn btn-outline-primary fw-bold" %></p>
+		</div>
+	</div>
+</div>
+<div class="container-fluid  mt-5 mb-4 bg-light">
+	<h1 class="branch text-center fw-bold">Our Branch</h1>
+		<div class="row">
+				<div class="col-lg-4 mb-4">
+					<div class="card mt-5 mb-3" style="width: 17rem;">
+						<%= image_tag 'h1.png', class:"card-img-top" %>
+					  <div class="card-body">
+					    <h5 class="card-title fw-bold">Branch 1</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <%= link_to 'See Branch', branch1_path, class:"btn btn-primary" %>
+					  </div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-4">
+					<div class="card mt-5 mb-3" style="width: 17rem;">
+					  <%= image_tag 'h1.png', class:"card-img-top" %>
+					  <div class="card-body">
+					    <h5 class="card-title fw-bold">Branch 2</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <%= link_to 'See Branch', branch2_path, class:"btn btn-primary" %>
+					  </div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-4">
+					<div class="card mt-5 mb-3" style="width: 17rem;">
+					  <%= image_tag 'h1.png', class:"card-img-top" %>
+					  <div class="card-body">
+					    <h5 class="card-title fw-bold">Branch 3</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <%= link_to 'See Branch', branch3_path, class:"btn btn-primary" %>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container mt-5 ">
+			<h1 class="docs text-center fw-bold"> Document's</h1>
+			<div class="row">
+				<div class="col-lg-6">
+					<p class="lead fw-bold text-center" id="doc1">A document is a written, drawn, presented, or memorialized representation of thought, often the manifestation of non-fictional, as well as fictional, content. The word originates from the Latin Documentum, which denotes a "teaching" or "lesson": the verb doceō denotes "to teach"</p>
+					<p class="text-center "><%= link_to 'See Document', documents_path, class: "btn btn-outline-primary fw-bold mt-4" %></p>
+				</div>
+				<div class="col-lg-6">
+					<%= image_tag 'doc1.avif', class:"img-fluid" %>
+				</div>
+			</div>
+		</div>
+		<div class="container mb-4 bg-light">
+			<h1 class="about text-center fw-bold" >About Us</h1>
+			<div class="row">
+				<div class="col-lg-6 mt-4">
+					<%= image_tag 'pexel.jpeg', class:"img-thumbnail" %>
+				</div>
+				<div class="col-lg-6 mt-5">
+					<p class="lead fw-bold text-center">Human resources is the set of people who make up the workforce of an organization, business sector, industry, or economy. A narrower concept is human capital, the knowledge and skills which the individuals command. Similar terms include manpower, labor, personnel, associates or simply: people</p>
+					<p class="text-center "><%= link_to 'About Us', about_us_path, class: "btn btn-outline-primary fw-bold mt-4" %></p>
+				</div>
+			</div>
+		</div>
+			<div class="container mt-5 mb-5">
+				<h1 class="docs text-center fw-bold"> Trainee's</h1>
+				<div class="row">
+					<div class="col-lg-6">
+						<p class="lead fw-bold text-center" id="trainee">A trainee is commonly known as an individual taking part in a trainee program within an organization after having graduated from higher and technical courses. A trainee is an official employee of the firm that is being trained to the job they were originally hired for. Literally, a trainee is an employee in training.</p>
+						<p class="text-center "><%= link_to 'See Trainees', admin_trainees_path, class: "btn btn-outline-primary fw-bold mt-4" %></p>
+					</div>
+					<div class="col-lg-6">
+						<%= image_tag 'trainee.avif', class:"img-fluid" %>
+					</div>
+				</div>
+			</div>
+		<div class="container bg-primary mb-5">
+			<h1 class="cont text-center text-light fw-bold border-bottom">Contact Us</h1>
+			<div class="row">
+				<div class="col-lg-6 mt-5 px-5">
+					<i class="fa-solid fa-location-dot fa-2x text-light"></i> <span class="text-light fw-bold fs-3">Location :</span> <p class="lead text-light">Street - 200 Civic Plaza <br>
+				    					 City - Dublin<br> 	
+				    					 State - California<br>
+				    					 Zipcode - 94568<br>
+				    					 Country - United States<br>		
+				    </p>
+					<i class="fa-solid fa-phone fa-2x text-light	"></i>
+					 <p class="lead text-light"> <span class="text-light fw-bold fs-3">Phone Number : </span>(925)-828-1315
+					 </p>
+					 <p><%= link_to 'Contact Us', contact_us_path, class: "btn btn-dark fw-bold" %></p>
+				</div>
+				<div class="col-lg-6">
+					<%= image_tag 'contact.webp', class: "img-fluid" %>
+				</div>
+			</div>
+		</div>
